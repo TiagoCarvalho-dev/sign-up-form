@@ -9,9 +9,92 @@
 </head>
 <body>
   <div>
-    <div>
+    <div class="title">
       <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
       <h2>Duis aute irure dolor in reprehenderit in.</h2>
+    </div>
+    <form action="#" method="post">
+      <div class="first-row">
+        <div>
+          <div>
+            <label for="name">NAME:</label>
+          </div>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+        <div>
+          <div>
+            <label for="age">AGE:</label>
+          </div>
+          <input type="tel" id="age" name="age" min="12" max="100" placeholder="18" required>
+        </div>
+      </div>
+      <div class="second-row">
+        <div>
+          <div>
+            <label for="email">EMAIL:</label>
+          </div>
+          <input type="email" id="email" name="email" placeholder="something@somewhere.com" required>
+        </div>
+        <div>
+          <div>
+            <label for="phone">PHONE NUMBER:</label>
+          </div>
+          <input type="tel" id="phone" name="phone" placeholder="(xx)xxxxxxxxx">
+        </div>
+      </div>
+      <div class="third-row">
+        <div>
+          <div>
+            <label for="pwd">PASSWORD:</label>
+          </div>
+          <input type="text" id="pwd" name="pwd" required>
+        </div>
+        <div>
+          <div>
+            <label for="pwd-confirmation">CONFIRM PASSWORD:</label>
+          </div>
+          <input type="text" id="pwd-confirmation" name="pwd-confirmation" required>
+        </div>
+      </div>
+      <div class="forth-row">
+        <fieldset>
+          <legend>WHAT ARE YOUR TRAINING GOALS?</legend>
+          <div>
+            <input type="radio" id="fitness" name="goals" value="fitness" checked required>
+            <label for="fitness">FITNESS</label>
+          </div>
+          <div>
+            <input type="radio" id="grow-stronger" name="goals" value="GROW STRONGER">
+            <label for="grow-stronger">GROW STRONGER</label>
+          </div>
+          <div>
+            <input type="radio" id="sport" name="goals" value="SPORT">
+            <label for="sport">SPORT</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="fifth-row">
+        <div>
+          <label for="frequency">HOW OFTEN DO YOU WORKOUT?</label>
+        </div>
+        <input type="range" id="frequency" name="frequency" min="0" max="7" value="2" required>
+        <output name="frequency-value" for="frequency">2</output>
+      </div>
+      <div class="sixth-row">
+        <div>
+          <input type="checkbox" id="agreement" name="agreement" required>
+          <label for="agreement">I READ AND AGREE WITH THE RULES PRESENTED IN THE TERMS OF SERVICE</label>
+        </div>
+        <div>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">I WISH TO RECEIVE WEEKLY NEWSLETTER EMAILS</label>
+        </div>
+      </div>
+      <button type="submit">REGISTER</button>
+    </form>
+    <div class="schedule-table">
+      <h2>WE ARE OPEN 7 DAYS A WEEK! CHECKOUT OUR FULL SCHEDULE BELOW.</h2>
+
     </div>
   </div>
   <div>
