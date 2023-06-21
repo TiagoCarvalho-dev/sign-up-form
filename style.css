@@ -1,6 +1,6 @@
 /* CSS Reset */
 
-/* html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -19,4 +19,26 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-} */
+}
+
+@font-face {
+  font-family: Bebas-Nue;
+  src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+:root {
+  box-sizing: border-box;
+  --background-gray: rgb(228, 228, 228);
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  font-family: Bebas-Nue, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--background-gray);
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+}
