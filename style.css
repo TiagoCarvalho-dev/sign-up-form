@@ -3,7 +3,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -73,15 +73,18 @@ form {
   display: flex;
   flex-direction: column;
   background-color: var(--form-background);
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
+  box-shadow: 2px 2px 13px gray;
 }
 
 form .first-row,
 form .second-row,
 form .third-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
+  margin-left: 1.5rem; 
+  gap: 3rem;
 }
 
 form label {
@@ -156,10 +159,41 @@ input[type="radio"]:checked::before {
   visibility: visible;
 }
 
+input[type="checkbox"] {
+  accent-color: var(--details-color);
+}
+
 .fifth-row {
   margin: 0 1rem;
 }
 
 .fifth-row label {
   font-size: 1rem;
+}
+
+.sixth-row {
+  display: flex;
+  align-items: center;
+  margin: 1.2rem;
+  gap: 3rem;
+}
+
+.sixth-row > button {
+  background-color: var(--details-color);
+  border: none;
+  border-radius: 10px;
+  width: 13rem;
+  height: 3rem;
+  color: var(--form-background);
+  box-shadow: 2px 2px 3px gray;
+  font-size: 1rem;
+}
+
+.sixth-row > p {
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--details-color);
+  text-decoration: none;
 }
