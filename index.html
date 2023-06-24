@@ -11,19 +11,19 @@
   <div class="left-section">
     <div class="title">
       <h1>You don't have to be great to start, but you have to start to be great.</h1>
-      <h2>Join Fit Fitness and start your journey today!</h2>
+      <h2>Join Fit Fitness and start your journey <em>today!</em></h2>
     </div>
     <form action="#" method="post">
       <div class="first-row">
         <div>
           <div>
-            <label for="name">NAME:</label>
+            <label for="name">*NAME:</label>
           </div>
           <input type="text" id="name" name="name" placeholder="John Doe" required>
         </div>
         <div>
           <div>
-            <label for="age">AGE:</label>
+            <label for="age">*AGE:</label>
           </div>
           <input type="tel" id="age" name="age" min="12" max="100" placeholder="18" required>
         </div>
@@ -31,7 +31,7 @@
       <div class="second-row">
         <div>
           <div>
-            <label for="email">EMAIL:</label>
+            <label for="email">*EMAIL:</label>
           </div>
           <input type="email" id="email" name="email" placeholder="something@somewhere.com" required>
         </div>
@@ -45,45 +45,41 @@
       <div class="third-row">
         <div>
           <div>
-            <label for="pwd">PASSWORD:</label>
+            <label for="pwd">*PASSWORD:</label>
           </div>
           <input type="text" id="pwd" name="pwd" required>
         </div>
         <div>
           <div>
-            <label for="pwd-confirmation">CONFIRM PASSWORD:</label>
+            <label for="pwd-confirmation">*CONFIRM PASSWORD:</label>
           </div>
           <input type="text" id="pwd-confirmation" name="pwd-confirmation" required>
         </div>
       </div>
       <div class="forth-row">
-        <fieldset>
-          <legend>WHAT ARE YOUR TRAINING GOALS?</legend>
+        <div class="radio-container">
+          <p>WHAT ARE YOUR TRAINING GOALS?</p>
           <div>
-            <input type="radio" id="fitness" name="goals" value="fitness" checked required>
+            <input type="radio" id="fitness" name="goals" value="fitness" checked>
             <label for="fitness">FITNESS</label>
-          </div>
-          <div>
             <input type="radio" id="grow-stronger" name="goals" value="GROW STRONGER">
             <label for="grow-stronger">GROW STRONGER</label>
-          </div>
-          <div>
             <input type="radio" id="sport" name="goals" value="SPORT">
             <label for="sport">SPORT</label>
           </div>
-        </fieldset>
+        </div>
       </div>
       <div class="fifth-row">
         <div>
           <label for="frequency">HOW OFTEN DO YOU WORKOUT?</label>
         </div>
-        <input type="range" id="frequency" name="frequency" min="0" max="7" value="2" required>
-        <output name="frequency-value" for="frequency">2</output>
+        <input type="range" id="frequency" name="frequency" min="0" max="7" value="2">
+        <output name="frequency-value" for="frequency"></output>
       </div>
       <div class="sixth-row">
         <div>
           <input type="checkbox" id="agreement" name="agreement" required>
-          <label for="agreement">I READ AND AGREE WITH THE RULES PRESENTED IN THE TERMS OF SERVICE</label>
+          <label for="agreement">*I READ AND AGREE WITH THE RULES PRESENTED IN THE TERMS OF SERVICE</label>
         </div>
         <div>
           <input type="checkbox" id="newsletter" name="newsletter">

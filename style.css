@@ -28,8 +28,10 @@ time, mark, audio, video {
 
 :root {
   box-sizing: border-box;
-  --background-gray: rgb(228, 228, 228);
-  --form-background: rgb(189, 189, 189);
+  --background-gray: rgba(218, 218, 218, 0.863);
+  --form-background: rgb(230, 230, 230);
+  --details-color: rgb(129, 93, 67);
+  --border-color: rgba(168, 168, 168, 0.418);
 }
 
 body {
@@ -55,23 +57,23 @@ body {
 }
 
 .title {
-  margin: 5rem;
+  margin: 3rem;
 }
 
 .title:first-child {
-  font-size: 4rem;
-  line-height: 3.8rem;
+  font-size: 3.5rem;
+  line-height: 3.3rem;
 }
 
 .title > h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   background-color: var(--form-background);
+  gap: 1rem;
   padding: 2rem;
 }
 
@@ -83,11 +85,72 @@ form .third-row {
 }
 
 form label {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
-form input[type="text"],
-form input[type="tel"],
-form input[type="email"] {
-  
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  background-color: var(--form-background);
+  width: 20rem;
+  height: 1.7rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin: 0 1rem;
+  padding: 0.2rem 0.6rem;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 4px 2px var(--details-color);
+}
+
+input[type="text"]:valid,
+input[type="tel"]:valid,
+input[type="email"]:valid {
+  box-shadow: 0px 0px 4px 1px green;
+}
+
+input[type="text"]:invalid,
+input[type="tel"]:invalid,
+input[type="email"]:invalid {
+  box-shadow: 0px 0px 4px 1px red;
+}
+
+.radio-container {
+  display: flex;
+  gap: 2rem;
+  margin: 1.4rem; 
+}
+
+.radio-container p,
+.radio-container label {
+  font-size: 1.5rem;
+  vertical-align: 0.1rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  position: relative;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  color: var(--details-color);
+}
+
+input[type="radio"]::before {
+  position: absolute;
+  content: "\25CF";
+  font-size: 2.2rem;
+  right: -0.07rem;
+  top: -0.83rem;
+  visibility: hidden;
+}
+
+input[type="radio"]:checked::before {
+  visibility: visible;
 }
