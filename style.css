@@ -32,6 +32,8 @@ time, mark, audio, video {
   --form-background: rgb(230, 230, 230);
   --details-color: rgb(129, 93, 67);
   --border-color: rgba(168, 168, 168, 0.418);
+  --valid-color: rgb(12, 148, 0);
+  --invalid-color: rgb(221, 10, 10);
 }
 
 body {
@@ -122,7 +124,40 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
   outline: none;
-  box-shadow: 0px 0px 4px 1px var(--details-color);
+  box-shadow: 0px 0px 4px 0.1px var(--details-color);
+}
+
+input + div {
+  margin: 0.1rem 0 0 2.3rem;
+  font-size: 0.9rem;
+}
+
+input[type="text"]:valid + div,
+input[type="tel"]:valid + div,
+input[type="email"]:valid + div,
+input[type="password"]:valid + div {
+  color: var(--valid-color);
+}
+
+input[type="text"]:valid + div::before,
+input[type="tel"]:valid + div::before,
+input[type="email"]:valid + div::before,
+input[type="password"]:valid + div::before {
+  content: "\2714";
+}
+
+input[type="text"]:invalid + div,
+input[type="tel"]:invalid + div,
+input[type="email"]:invalid + div,
+input[type="password"]:invalid + div {
+  color: var(--invalid-color);
+}
+
+input[type="text"]:invalid + div::before,
+input[type="tel"]:invalid + div::before,
+input[type="email"]:invalid + div::before,
+input[type="password"]:invalid + div::before {
+  content: "\2716";
 }
 
 .radio-container {
