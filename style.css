@@ -85,7 +85,7 @@ form {
   display: flex;
   flex-direction: column;
   background-color: var(--form-background);
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 2rem;
   box-shadow: 2px 2px 13px gray;
 }
@@ -122,28 +122,14 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
   outline: none;
-  box-shadow: 0px 0px 4px 2px var(--details-color);
-}
-
-input[type="text"]:valid,
-input[type="tel"]:valid,
-input[type="email"]:valid,
-input[type="password"]:valid {
-  box-shadow: 0px 0px 4px 1px green;
-}
-
-input[type="text"]:invalid,
-input[type="tel"]:invalid,
-input[type="email"]:invalid,
-input[type="password"]:invalid {
-  box-shadow: 0px 0px 4px 1px red;
+  box-shadow: 0px 0px 4px 1px var(--details-color);
 }
 
 .radio-container {
   display: flex;
   gap: 2rem;
   margin: 1.5rem;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .radio-container p,
@@ -218,4 +204,5 @@ footer {
   text-align: center;
   font-size: 1.3rem;
   margin-top: auto;
+  padding: 1rem;
 }

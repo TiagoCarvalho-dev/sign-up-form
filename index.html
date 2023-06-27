@@ -19,7 +19,7 @@
           <div>
             <label for="name">*NAME:</label>
           </div>
-          <input type="text" id="name" name="name" placeholder="John Doe" required>
+          <input type="text" id="name" name="name" placeholder="John Doe" data-help="tessssst" required>
         </div>
         <div>
           <div>
@@ -39,7 +39,7 @@
           <div>
             <label for="phone">PHONE NUMBER:</label>
           </div>
-          <input type="tel" id="phone" name="phone" placeholder="(xx)xxxxxxxxx">
+          <input type="tel" id="phone" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890">
         </div>
       </div>
       <div class="third-row">
@@ -47,13 +47,13 @@
           <div>
             <label for="pwd">*PASSWORD:</label>
           </div>
-          <input type="password" id="pwd" name="pwd" required>
+          <input type="password" id="pwd" name="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
         </div>
         <div>
           <div>
             <label for="pwd-confirmation">*CONFIRM PASSWORD:</label>
           </div>
-          <input type="password" id="pwd-confirmation" name="pwd-confirmation" required>
+          <input type="password" id="pwd-confirmation" name="pwd-confirmation" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
         </div>
       </div>
       <div class="forth-row">
